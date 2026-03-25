@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Editor - Free Online PDF Editor</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PDF Editor",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "description": "Free online PDF editor to view, edit, draw on, and annotate PDF documents directly in your browser.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <h1>PDF Editor</h1>
+            </div>
+            <div class="file-input">
+                <label for="file-upload">Open PDF</label>
+                <input type="file" id="file-upload" accept="application/pdf">
+            </div>
+            <div class="pages">
+                <h2>Pages</h2>
+                <div id="pages-container"></div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="toolbar">
+                <div class="tool-group">
+                    <button id="zoom-in" title="Zoom In"><i class="fas fa-search-plus"></i></button>
+                    <button id="zoom-out" title="Zoom Out"><i class="fas fa-search-minus"></i></button>
+                </div>
+                <div class="tool-group">
+                    <button id="draw" title="Draw Tool"><i class="fas fa-pen"></i></button>
+                    <button id="text" title="Text Tool"><i class="fas fa-font"></i></button>
+                    <button id="clear" title="Clear Page"><i class="fas fa-trash-alt"></i></button>
+                </div>
+                <div class="tool-group">
+                    <select id="font-family" title="Font Family">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                    <input type="number" id="font-size" value="20" min="1" max="100" title="Font Size">
+                </div>
+                <button id="save" class="save-btn"><i class="fas fa-save"></i> Download PDF</button>
+            </div>
+            <div class="pdf-viewer">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
